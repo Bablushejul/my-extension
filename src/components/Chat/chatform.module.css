@@ -1,0 +1,26 @@
+.chartForm {
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  width: 700px;
+  height: 40px;
+  justify-items: center;
+}
+
+.input {
+  width: 90vw;
+  height: 30px;
+  border-radius: 2px;
+  border-color: rgb(165, 97, 42);
+  padding: 2px;
+  border-style: groove;
+  display: block;
+}
+
+.btn {
+  height: 40px;
+  border-radius: 2px;
+  border-color: rgb(165, 97, 42);
+  align-items: center;
+  text-align: center;
+}

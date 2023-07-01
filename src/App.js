@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import "./App.css";
+
+import Extension from "./components/extensions/Extension";
+import Switch from "./components/extensions/Switch";
+import { AuthContext } from "./components/store/AuthContext";
+import Chart from "./components/Chat/Chart";
 
 function App() {
+  const ctx = useContext(AuthContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      <div className="Chartbox">
+      <div className="control">
+          <Extension />
+        </div>
+        <div className="control">
+          <h1>For Help</h1>
+        </div>
+
+        <div className="actions">
+          <Switch />
+        </div>
+        {ctx.isActive && <Chart />}
+      </div>
+      
     </div>
   );
 }
